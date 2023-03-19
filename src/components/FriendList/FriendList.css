@@ -1,0 +1,15 @@
+.friends {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+    max-height: 80vh;
+    overflow: auto;
+    display: inline-block;
+}
+
+.friend-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}

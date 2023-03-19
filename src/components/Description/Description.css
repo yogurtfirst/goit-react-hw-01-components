@@ -1,0 +1,22 @@
+.description {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 25px;
+    align-items: center;
+    background-color: #fff;
+}
+
+.avatar {
+    width: 120px;
+    border-radius: 50%;
+}
+
+.name {
+    font-weight: 700;
+}
+
+.tag, .location {
+    font-weight: 500;
+    color: #6b6b6b;
+}
