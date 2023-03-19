@@ -2,15 +2,14 @@ import PropTypes from 'prop-types';
 import DownloadedItem from '../DownloadedItem/DownloadedItem.js';
 import './Statistics.css';
 
-const Statistics = ({ data }) => {
-    const cntItems = data.length;
+const Statistics = ({ title, stats }) => {
     return (
         <section className="statistics">
-            <h2 className="title">Upload stats</h2>
+            {title && <h2 className="title">{title}</h2>}
 
             <ul className="stat-list">
-                {data.map(({id, label, percentage}) => (
-                    <DownloadedItem key= {id} statLabel= {label} percentage= {percentage} cntItems={cntItems} />
+                {stats.map(({id, label, percentage}) => (
+                    <DownloadedItem key= {id} statLabel= {label} percentage= {percentage} />
                 ))}
             </ul>
         </section>    
@@ -18,7 +17,8 @@ const Statistics = ({ data }) => {
 };
 
 Statistics.propTypes = {
-    data: PropTypes.array.isRequired,
+    title: PropTypes.string,
+    stats: PropTypes.array.isRequired,
 }
 
 export default Statistics;
