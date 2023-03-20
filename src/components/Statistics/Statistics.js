@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types';
 import DownloadedItem from '../DownloadedItem/DownloadedItem.js';
-import './Statistics.css';
+import css from './Statistics.module.css';
 
 const Statistics = ({ title, stats }) => {
     return (
-        <section className="statistics">
+        <section className={css["statistics"]}>
             {title && <h2 className="title">{title}</h2>}
 
-            <ul className="stat-list">
+            <ul className={css["stat-list"]}>
                 {stats.map(({id, label, percentage}) => (
                     <DownloadedItem key= {id} statLabel= {label} percentage= {percentage} />
                 ))}

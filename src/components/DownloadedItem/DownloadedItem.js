@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import './DownloadedItem.css';
+import css from './DownloadedItem.module.css';
 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
@@ -7,11 +7,11 @@ function getRandomHexColor() {
 
 const DownloadedItem = ({ statLabel, percentage }) => {
     return (
-        <li className="downloaded-item" style={{
+        <li className={css["downloaded-item"]} style={{
             backgroundColor: getRandomHexColor(),
         }}>
-            <span className="stat-label">{statLabel}</span>
-            <span className="percentage">{percentage}</span>
+            <span className={css["stat-label"]}>{statLabel}</span>
+            <span className={css["percentage"]}>{percentage}</span>
         </li>
     )
 };

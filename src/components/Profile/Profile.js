@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 import Description from '../Description/Description.js';
 import Stats from '../Stats/Stats.js';
-import './Profile.css';
+import css from './Profile.module.css';
 
 const Profile = ({username, tag, location, avatar, stats}) => {
     return (
-        <div className="profile">
+        <div className={css["profile"]}>
             <Description
                 username={username}
                 tag={tag}
